@@ -15,9 +15,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Run ls
-        run: ls
-
-      - name: Run git status
-        run: git status
+      - name: Run git commands
+        run: |
+          git fetch --all  
+          git config --global user.email "no-reply@github.com"
+          git config --global user.name "GitHub Actions"
+          git checkout main
+          git add --all 
+          git status
 
