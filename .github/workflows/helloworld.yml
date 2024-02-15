@@ -17,10 +17,6 @@ jobs:
     steps:
       - name: Run git commands
         run: |
-          git fetch --all  
           git config --global user.email "no-reply@github.com"
           git config --global user.name "GitHub Actions"
-          git checkout main
-          git add --all 
-          git status
-
+          git fetch --all 
