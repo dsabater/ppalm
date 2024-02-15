@@ -15,6 +15,18 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Run git commands
+      - name: save current date
+        run: |
+          date > time.txt    
+          
+      - name: Run git commands 1
         run: |
           git --version
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: Run git commands 2
+        run: |
+          git add time.txt
+          git commit -m "new date"
+          git push origin main
