@@ -16,7 +16,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: checkout
-        uses: actions/checkout@2
+        uses: actions/checkout@3
     
       - name: save current date
         run: |
